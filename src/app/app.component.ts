@@ -7,8 +7,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   template: `
     <header class="topbar">
       <a routerLink="/" class="brand" aria-label="Ir al inicio">
-        <span class="brand__mark">P</span>
-        <span><strong>MathCrack</strong><small>4.0 · Lengua 4º Primaria</small></span>
+        <span class="brand__mark">M</span>
+        <span><strong>MathCrack</strong><small>3.0 · Matemáticas 3.º Primaria</small></span>
       </a>
       <a routerLink="/progreso" class="progress-link">Mi progreso ⭐</a>
     </header>

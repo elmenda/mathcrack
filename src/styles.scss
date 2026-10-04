@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange-50: #fff8f1;
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+  --orange-900: #7c2d12;
+
+  /* Alias para que ningún estilo antiguo quede sin resolver. */
+  --blue-100: var(--orange-100);
+  --blue-500: var(--orange-500);
+  --blue-700: var(--orange-700);
+  --blue-900: var(--orange-900);
+
+  --ink: #2f1b12;
+  --muted: #72594d;
+  --surface: #ffffff;
+  --background: #fffaf5;
+  --border: #f2d7c7;
+  --radius: 22px;
+
+  font-family: Inter, "Nunito", ui-rounded, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--background);
+  font-synthesis: none;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--orange-200);
+}
+
+:focus-visible {
+  outline: 3px solid var(--orange-300);
+  outline-offset: 3px;
+}
