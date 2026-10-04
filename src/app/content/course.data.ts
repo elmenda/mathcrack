@@ -31,9 +31,11 @@ export const TOPICS: Topic[] = [
             ]
           },
           {
-            "type": "example",
-            "title": "Ejemplo",
-            "text": "427 = 4 C + 2 D + 7 U = 400 + 20 + 7."
+            "type": "place-value",
+            "title": "Ejemplo: 427",
+            "text": "427 = 4 C + 2 D + 7 U = 400 + 20 + 7. Se lee «cuatrocientos veintisiete».",
+            "headers": ["C", "D", "U"],
+            "digits": ["4", "2", "7"]
           },
           {
             "type": "tip",
@@ -299,9 +301,18 @@ export const TOPICS: Topic[] = [
             ]
           },
           {
-            "type": "example",
-            "title": "Ejemplo",
-            "text": "6.302 = 6 UM + 3 C + 0 D + 2 U."
+            "type": "place-value",
+            "title": "Ejemplo: 1.342",
+            "text": "1.342 = 1 UM + 3 C + 4 D + 2 U = 1.000 + 300 + 40 + 2. Se lee «mil trescientos cuarenta y dos».",
+            "headers": ["UM", "C", "D", "U"],
+            "digits": ["1", "3", "4", "2"]
+          },
+          {
+            "type": "place-value",
+            "title": "Otro ejemplo: 6.302",
+            "text": "6.302 = 6 UM + 3 C + 0 D + 2 U = 6.000 + 300 + 0 + 2. El 0 ocupa el lugar de las decenas.",
+            "headers": ["UM", "C", "D", "U"],
+            "digits": ["6", "3", "0", "2"]
           },
           {
             "type": "tip",

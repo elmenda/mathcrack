@@ -11,10 +11,12 @@ export type SectionKind =
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface TheoryBlock {
-  type: 'text' | 'important' | 'example' | 'list' | 'tip';
+  type: 'text' | 'important' | 'example' | 'list' | 'tip' | 'place-value';
   title?: string;
   text?: string;
   items?: string[];
+  headers?: string[];
+  digits?: string[];
 }
 
 export interface Answer {

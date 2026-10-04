@@ -15,6 +15,38 @@ import { getSection, getTopic } from '../../content/course.repository';
             @for (block of s.theory; track $index) {
               <section [class]="'block ' + block.type">
                 @if (block.title) { <h2>{{ block.title }}</h2> }
+                @if (block.type === 'place-value' && block.headers && block.digits) {
+                  <div class="place-value-wrap">
+                    <table class="place-value-table" aria-label="Tabla de valor posicional">
+                      <thead>
+                        <tr>
+                          @for (header of block.headers; track header) {
+                            <th scope="col">{{ header }}</th>
+                          }
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          @for (digit of block.digits; track $index) {
+                            <td>{{ digit }}</td>
+                          }
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="place-value-legend">
+                      @for (header of block.headers; track header) {
+                        <span><strong>{{ header }}</strong> =
+                          @switch (header) {
+                            @case ('UM') { unidad de millar }
+                            @case ('C') { centena }
+                            @case ('D') { decena }
+                            @case ('U') { unidad }
+                          }
+                        </span>
+                      }
+                    </div>
+                  </div>
+                }
                 @if (block.text) { <p>{{ block.text }}</p> }
                 @if (block.items) { <ul>@for (item of block.items; track item) { <li>{{ item }}</li> }</ul> }
               </section>
