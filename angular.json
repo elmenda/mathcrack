@@ -63,7 +63,9 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "buildTarget": "mathcrack-3-0:build:development"
+            "tsConfig": "tsconfig.spec.json",
+            "runner": "vitest",
+            "buildTarget": "::development"
           }
         },
         "lint": {
