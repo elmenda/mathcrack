@@ -61,7 +61,10 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "buildTarget": "mathcrack-3-0:build:development"
+          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
