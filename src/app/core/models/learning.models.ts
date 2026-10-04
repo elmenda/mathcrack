@@ -1,12 +1,5 @@
 export type SectionKind =
-  | 'numbers'
-  | 'calculation'
-  | 'geometry'
-  | 'measurement'
-  | 'mental'
-  | 'problems'
-  | 'data'
-  | 'review';
+  'numbers' | 'calculation' | 'geometry' | 'measurement' | 'mental' | 'problems' | 'data' | 'review';
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
 

@@ -15,6 +15,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     <main><router-outlet /></main>
   `,
   styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {}

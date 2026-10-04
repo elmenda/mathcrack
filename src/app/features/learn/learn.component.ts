@@ -10,11 +10,20 @@ import { getSection, getTopic } from '../../content/course.repository';
       @if (section(); as s) {
         <div class="page">
           <a [routerLink]="['/tema', t.id]">← Volver al tema</a>
-          <header><span>{{ s.emoji }}</span><div><small>APRENDER</small><h1>{{ s.title }}</h1><p>{{ s.subtitle }}</p></div></header>
+          <header>
+            <span>{{ s.emoji }}</span>
+            <div>
+              <small>APRENDER</small>
+              <h1>{{ s.title }}</h1>
+              <p>{{ s.subtitle }}</p>
+            </div>
+          </header>
           <div class="lesson">
             @for (block of s.theory; track $index) {
               <section [class]="'block ' + block.type">
-                @if (block.title) { <h2>{{ block.title }}</h2> }
+                @if (block.title) {
+                  <h2>{{ block.title }}</h2>
+                }
                 @if (block.type === 'place-value' && block.headers && block.digits) {
                   <div class="place-value-wrap">
                     <table class="place-value-table" aria-label="Tabla de valor posicional">
@@ -35,20 +44,37 @@ import { getSection, getTopic } from '../../content/course.repository';
                     </table>
                     <div class="place-value-legend">
                       @for (header of block.headers; track header) {
-                        <span><strong>{{ header }}</strong> =
+                        <span
+                          ><strong>{{ header }}</strong> =
                           @switch (header) {
-                            @case ('UM') { unidad de millar }
-                            @case ('C') { centena }
-                            @case ('D') { decena }
-                            @case ('U') { unidad }
+                            @case ('UM') {
+                              unidad de millar
+                            }
+                            @case ('C') {
+                              centena
+                            }
+                            @case ('D') {
+                              decena
+                            }
+                            @case ('U') {
+                              unidad
+                            }
                           }
                         </span>
                       }
                     </div>
                   </div>
                 }
-                @if (block.text) { <p>{{ block.text }}</p> }
-                @if (block.items) { <ul>@for (item of block.items; track item) { <li>{{ item }}</li> }</ul> }
+                @if (block.text) {
+                  <p>{{ block.text }}</p>
+                }
+                @if (block.items) {
+                  <ul>
+                    @for (item of block.items; track item) {
+                      <li>{{ item }}</li>
+                    }
+                  </ul>
+                }
               </section>
             }
           </div>
@@ -62,7 +88,7 @@ import { getSection, getTopic } from '../../content/course.repository';
     }
   `,
   styleUrl: './learn.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LearnComponent {
   readonly topicId = input.required<string>();

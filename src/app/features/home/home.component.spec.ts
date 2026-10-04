@@ -6,7 +6,7 @@ describe('HomeComponent', () => {
   it('creates', async () => {
     await TestBed.configureTestingModule({
       imports: [HomeComponent],
-      providers: [provideRouter([])]
+      providers: [provideRouter([])],
     }).compileComponents();
     expect(TestBed.createComponent(HomeComponent).componentInstance).toBeTruthy();
   });

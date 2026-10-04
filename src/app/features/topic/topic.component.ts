@@ -10,7 +10,14 @@ import { ProgressService } from '../../core/services/progress.service';
     @if (topic(); as current) {
       <section class="topic-hero">
         <a routerLink="/">← Todos los temas</a>
-        <div class="hero-row"><span>{{ current.emoji }}</span><div><small>TEMA {{ current.order }}</small><h1>{{ current.title }}</h1><p>{{ current.description }}</p></div></div>
+        <div class="hero-row">
+          <span>{{ current.emoji }}</span>
+          <div>
+            <small>TEMA {{ current.order }}</small>
+            <h1>{{ current.title }}</h1>
+            <p>{{ current.description }}</p>
+          </div>
+        </div>
       </section>
       <section class="sections">
         <h2>Estudia paso a paso</h2>
@@ -26,9 +33,7 @@ import { ProgressService } from '../../core/services/progress.service';
                 <div class="score">Mejor resultado: {{ p.bestScore }}% {{ p.completed ? '⭐' : '' }}</div>
               }
               <div class="actions">
-                <a [routerLink]="['/tema', current.id, 'aprender', section.id]">
-                  📘 Aprender
-                </a>
+                <a [routerLink]="['/tema', current.id, 'aprender', section.id]"> 📘 Aprender </a>
                 @if (section.questions.length > 0) {
                   <a class="practice" [routerLink]="['/tema', current.id, 'practicar', section.id]">
                     🎯 Practicar
@@ -42,7 +47,7 @@ import { ProgressService } from '../../core/services/progress.service';
     }
   `,
   styleUrl: './topic.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopicComponent {
   readonly topicId = input.required<string>();
