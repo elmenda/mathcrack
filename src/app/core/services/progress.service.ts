@@ -1,5 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
-import { SectionProgress } from '../models/learning.models';
+import { type SectionProgress } from '../models/learning.models';
 
 @Injectable({ providedIn: 'root' })
 export class ProgressService {

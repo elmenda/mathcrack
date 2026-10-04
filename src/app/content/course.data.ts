@@ -1,4 +1,4 @@
-import { Topic } from '../core/models/learning.models';
+import { type Topic } from '../core/models/learning.models';
 
 export const TOPICS: Topic[] = [
   {

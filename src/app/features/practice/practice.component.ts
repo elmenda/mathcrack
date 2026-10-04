@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, input, signal } f
 import { RouterLink } from '@angular/router';
 import { getSection, getTopic } from '../../content/course.repository';
 import { ProgressService } from '../../core/services/progress.service';
-import { Answer, Question } from '../../core/models/learning.models';
+import { type Answer, type Question } from '../../core/models/learning.models';
 
 @Component({
   selector: 'app-practice',
